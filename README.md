@@ -15,7 +15,7 @@ auth のパスワードは google アカウントのパスワードではなく�
 **アプリパスワード**を使用する。
 詳しくは[こちら](https://support.google.com/accounts/answer/185833?hl=ja)
 
-```typescript:SMTP
+```javascript:SMTP
 const smtp = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -29,7 +29,7 @@ const smtp = nodemailer.createTransport({
 
 ### 2.メッセージの作成
 
-```typescript:メッセージの作成
+```javascript:メッセージの作成
 const message = {
   from: process.env.MY_ACCOUNT,
   to: process.env.TO_EMAIL,
@@ -40,7 +40,7 @@ const message = {
 
 ### 3.メッセージの送信
 
-```typescript:メッセージの送信
+```javascript:メッセージの送信
 smtp.sendMail(message, (error: Error) => {
     if (error) {
       console.log("send failed");
